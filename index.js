@@ -18,7 +18,7 @@ try {
 
   if (typeof dlcommand !== 'undefined') {
     exec(dlcommand, (err, stdout, stderr) => {
-      core.addPath("$HOME/.local/bin");
+      core.addPath(process.env.HOME + "/.local/bin");
     });
   }
 } catch (error) {
