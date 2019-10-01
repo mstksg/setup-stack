@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const exec = require('child_process').exec;
+const child_process = require('child_process');
 const fs = require('fs');
 
 installdir = process.env.HOME + "/.local/bin"
@@ -22,9 +22,11 @@ try {
   }
 
   if (typeof dlcommand !== 'undefined') {
-    exec(dlcommand, (err, stdout, stderr) => {
-      core.addPath(installdir);
-    });
+    child_process.execSync(dlcommand);
+    core.addPath(installdir);
+    console.log("stack update");
+    child_process.execSync(installdir + "/stack", ["update"]);
+    console.log("stack update complete");
   }
 } catch (error) {
     core.setFailed(error.message);
