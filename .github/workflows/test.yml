@@ -10,4 +10,8 @@ jobs:
       uses: mstksg/setup-stack@master
       with:
         runs-on: ubuntu-latest
+    - name: Observe it
+      run: |
+        echo $PATH
+        stack update
 
