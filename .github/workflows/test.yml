@@ -7,7 +7,7 @@ jobs:
     name: Test setup-stack
     steps:
     - name: Load it
-      uses: mstksg/setup-haskell@master
+      uses: mstksg/setup-stack@master
       with:
         runs-on: ubuntu-latest
 
