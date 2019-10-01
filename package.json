@@ -1,0 +1,27 @@
+{
+  "name": "setup-stack",
+  "version": "1.0.0",
+  "description": "Github action for setting up haskell stack",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mstksg/setup-stack.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "haskell",
+    "stack"
+  ],
+  "author": "jle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mstksg/setup-stack/issues"
+  },
+  "homepage": "https://github.com/mstksg/setup-stack#readme"
+}
