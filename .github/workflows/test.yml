@@ -1,0 +1,13 @@
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test setup-stack
+    steps:
+    - name: Load it
+      uses: mstksg/setup-haskell
+      with:
+        runs-on: ubuntu-latest
+
