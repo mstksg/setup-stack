@@ -3,7 +3,7 @@ const github = require('@actions/github');
 const exec = require('child_process').exec;
 const fs = require('fs');
 
-installdir = process.env.HOME + "./local/bin"
+installdir = process.env.HOME + "/.local/bin"
 
 try {
   ro = core.getInput('runs-on').split("-")[0];
