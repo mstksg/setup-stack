@@ -7,18 +7,20 @@ try {
 
   switch(ro) {
     case "ubuntu":
-      dlcommand = "curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'"
+      dlcommand = "curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C ~/.local/bin '*/stack'";
       break;
     case "macOS":
-      dlcommand = "curl --insecure -L https://get.haskellstack.org/stable/osx-x86_64.tar.gz | tar xz --strip-components=1 --include '*/stack' -C ~/.local/bin"
+      dlcommand = "curl --insecure -L https://get.haskellstack.org/stable/osx-x86_64.tar.gz | tar xz --strip-components=1 --include '*/stack' -C ~/.local/bin";
       break;
     default:
-      console.log("unsupported OS")
+      core.setFailed("Unsopported OS");
   }
 
-  exec(dlcommand, (err, stdout, stderr) => {
-    core.addPath("$HOME/.local/bin")
-  });
+  if (typeof dlcommand !== 'undefined') {
+    exec(dlcommand, (err, stdout, stderr) => {
+      core.addPath("$HOME/.local/bin");
+    });
+  }
 } catch (error) {
     core.setFailed(error.message);
 }
