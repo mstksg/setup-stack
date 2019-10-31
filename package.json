@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Github action for setting up haskell stack",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@actions/core": "> 1",
+    "@actions/github": "> 1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
