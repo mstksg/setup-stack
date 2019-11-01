@@ -1,11 +1,5 @@
 name: 'Setup Stack'
 description: 'Setup an environment with stack in PATH'
-inputs:
-  runs-on:
-    description: |
-      Type of virtual machine to run on.  Should be one of the valid inputs
-      for jobs.<job id>.runs-on
-    required: true
 runs:
   using: 'node12'
   main: 'index.js'
