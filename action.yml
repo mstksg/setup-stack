@@ -1,5 +1,9 @@
 name: 'Setup Stack'
+author: Justin Le
 description: 'Setup an environment with stack in PATH'
+branding:
+  icon: arrow-down-circle
+  color: purple
 runs:
   using: 'node12'
   main: 'index.js'
