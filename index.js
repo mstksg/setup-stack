@@ -19,7 +19,7 @@ try {
       dlcommand = "curl --insecure -L https://get.haskellstack.org/stable/osx-x86_64.tar.gz | tar xz --strip-components=1 --include '*/stack' -C " + installdir;
       break;
     default:
-      core.setFailed("Unsopported OS");
+      core.setFailed("Unsupported OS");
   }
 
   if (dlcommand) {
