@@ -10,7 +10,7 @@ Usage:
 use: mstksg/setup-stack@v1
 ```
 
-Is cross-platform for ubuntu and macOS.
+Is cross-platform for ubuntu, macOS and windows.
 
 For example usage, see this [Haskell Stack Project CI Script][ci]
 
