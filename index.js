@@ -23,7 +23,7 @@ try {
       dlcommand = `PowerShell.exe -Command "&{Invoke-WebRequest -OutFile ${installdir}\\stack.zip https://get.haskellstack.org/stable/windows-x86_64.zip ; 7z e ${installdir}\\stack.zip -o${installdir} stack.exe ; Remove-Item ${installdir}\\stack.zip}"`;
       break;
     default:
-      core.setFailed("Unsopported OS");
+      core.setFailed("Unsupported OS");
   }
 
   if (dlcommand) {
