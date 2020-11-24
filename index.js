@@ -17,7 +17,7 @@ try {
       dlcommand = "curl -L https://get.haskellstack.org/stable/linux-x86_64.tar.gz | tar xz --wildcards --strip-components=1 -C " + installdir + " '*/stack'";
       break;
     case "darwin":
-      dlcommand = "curl --insecure -L https://get.haskellstack.org/stable/osx-x86_64.tar.gz | tar xz --strip-components=1 --include '*/stack' -C " + installdir;
+      dlcommand = "curl -L https://get.haskellstack.org/stable/osx-x86_64.tar.gz | tar xz --strip-components=1 --include '*/stack' -C " + installdir;
       break;
     case "win32":
       dlcommand = `PowerShell.exe -Command "&{Invoke-WebRequest -OutFile ${installdir}\\stack.zip https://get.haskellstack.org/stable/windows-x86_64.zip ; 7z e ${installdir}\\stack.zip -o${installdir} stack.exe ; Remove-Item ${installdir}\\stack.zip}"`;
