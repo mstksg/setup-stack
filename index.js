@@ -29,7 +29,7 @@ try {
   if (dlcommand) {
     child_process.execSync(dlcommand);
     core.addPath(installdir);
-    child_process.execSync(path.join(installdir, "stack"), ["update"]);
+    child_process.execSync(path.join(installdir, "stack", "update"));
   }
 } catch (error) {
     core.setFailed(error.message);
