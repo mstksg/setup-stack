@@ -7,7 +7,7 @@ parameters.
 Usage:
 
 ```yaml
-use: mstksg/setup-stack@v1
+uses: mstksg/setup-stack@v2
 ```
 
 Is cross-platform for ubuntu, macOS and windows.
